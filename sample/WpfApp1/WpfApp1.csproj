@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+  
+  <!-- If I comment out this Condition, Visual Studio doesn't error. -->
+  <PropertyGroup Condition="Exists('C:\Users\C:\Users\')">
+    <CodeAnalysisRulesetPath>$(SolutionDir)..\Build\Scripts\</CodeAnalysisRulesetPath>
+  </PropertyGroup>
+</Project>
